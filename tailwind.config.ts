@@ -15,6 +15,14 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }: any) {
+      addUtilities({
+        '.scrollbar-hide::-webkit-scrollbar': {
+          display: 'none',
+        },
+      });
+    },
+  ],
 }
 export default config
